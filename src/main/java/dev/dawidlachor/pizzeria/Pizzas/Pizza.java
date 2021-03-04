@@ -4,7 +4,7 @@ import dev.dawidlachor.pizzeria.cakes.Cake;
 import dev.dawidlachor.pizzeria.orders.Orders;
 import dev.dawidlachor.pizzeria.sauce.Sauce;
 import dev.dawidlachor.pizzeria.sizes.Size;
-import dev.dawidlachor.pizzeria.toppings.ConnectionFromPizza;
+import dev.dawidlachor.pizzeria.toppings.ToppingPizza;
 
 import javax.persistence.*;
 import java.util.List;
@@ -27,13 +27,18 @@ public class Pizza {
     )
     private List<Sauce> sauces;
     @OneToMany(mappedBy = "pizza")
-    private List<ConnectionFromPizza> connectionFromPizzas;
+    private List<ToppingPizza> toppingPizzas;
     @ManyToOne
     private Size size;
     @ManyToOne
     private Cake cake;
-    @ManyToOne
-    private Orders orders;
+    @ManyToMany
+    @JoinTable(
+            name = "pizza_order",
+            joinColumns = @JoinColumn(name = "pizza_id", referencedColumnName = "id"),
+            inverseJoinColumns = @JoinColumn(name = "order_id", referencedColumnName = "id")
+    )
+    private List<Orders> orders;
 
     public Long getId() {
         return id;
@@ -75,12 +80,12 @@ public class Pizza {
         this.sauces = sauces;
     }
 
-    public List<ConnectionFromPizza> getConnectionFromPizzas() {
-        return connectionFromPizzas;
+    public List<ToppingPizza> getConnectionFromPizzas() {
+        return toppingPizzas;
     }
 
-    public void setConnectionFromPizzas(List<ConnectionFromPizza> connectionFromPizzas) {
-        this.connectionFromPizzas = connectionFromPizzas;
+    public void setConnectionFromPizzas(List<ToppingPizza> toppingPizzas) {
+        this.toppingPizzas = toppingPizzas;
     }
 
     public Size getSize() {
@@ -99,11 +104,19 @@ public class Pizza {
         this.cake = cake;
     }
 
-    public Orders getOrders() {
+    public List<ToppingPizza> getToppingPizzas() {
+        return toppingPizzas;
+    }
+
+    public void setToppingPizzas(List<ToppingPizza> toppingPizzas) {
+        this.toppingPizzas = toppingPizzas;
+    }
+
+    public List<Orders> getOrders() {
         return orders;
     }
 
-    public void setOrders(Orders orders) {
+    public void setOrders(List<Orders> orders) {
         this.orders = orders;
     }
 
@@ -112,11 +125,11 @@ public class Pizza {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Pizza pizza = (Pizza) o;
-        return Objects.equals(id, pizza.id) && Objects.equals(name, pizza.name) && Objects.equals(description, pizza.description) && Objects.equals(standard, pizza.standard) && Objects.equals(sauces, pizza.sauces) && Objects.equals(connectionFromPizzas, pizza.connectionFromPizzas) && Objects.equals(size, pizza.size) && Objects.equals(cake, pizza.cake) && Objects.equals(orders, pizza.orders);
+        return Objects.equals(id, pizza.id) && Objects.equals(name, pizza.name) && Objects.equals(description, pizza.description) && Objects.equals(standard, pizza.standard) && Objects.equals(sauces, pizza.sauces) && Objects.equals(toppingPizzas, pizza.toppingPizzas) && Objects.equals(size, pizza.size) && Objects.equals(cake, pizza.cake) && Objects.equals(orders, pizza.orders);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, name, description, standard, sauces, connectionFromPizzas, size, cake, orders);
+        return Objects.hash(id, name, description, standard, sauces, toppingPizzas, size, cake, orders);
     }
 }

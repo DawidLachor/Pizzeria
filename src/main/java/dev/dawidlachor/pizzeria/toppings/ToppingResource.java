@@ -9,7 +9,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/api/pizza/topping")
 public class ToppingResource {
-    private ToppingService toppingService;
+    private final ToppingService toppingService;
 
     public ToppingResource(ToppingService toppingService) {
         this.toppingService = toppingService;

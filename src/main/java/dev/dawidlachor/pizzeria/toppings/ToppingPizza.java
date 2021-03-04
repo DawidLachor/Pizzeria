@@ -6,7 +6,7 @@ import javax.persistence.*;
 import java.util.List;
 
 @Entity
-public class ConnectionFromPizza {
+public class ToppingPizza {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;

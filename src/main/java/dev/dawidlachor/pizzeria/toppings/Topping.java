@@ -13,7 +13,7 @@ public class Topping {
     private String name;
     private BigDecimal price;
     @OneToMany(mappedBy = "topping")
-    private List<ConnectionFromPizza> connectionFromPizzas;
+    private List<ToppingPizza> toppingPizzas;
 
     public Long getId() {
         return id;
@@ -39,11 +39,11 @@ public class Topping {
         this.price = price;
     }
 
-    public List<ConnectionFromPizza> getConnectionFromPizzas() {
-        return connectionFromPizzas;
+    public List<ToppingPizza> getConnectionFromPizzas() {
+        return toppingPizzas;
     }
 
-    public void setConnectionFromPizzas(List<ConnectionFromPizza> connectionFromPizzas) {
-        this.connectionFromPizzas = connectionFromPizzas;
+    public void setConnectionFromPizzas(List<ToppingPizza> toppingPizzas) {
+        this.toppingPizzas = toppingPizzas;
     }
 }

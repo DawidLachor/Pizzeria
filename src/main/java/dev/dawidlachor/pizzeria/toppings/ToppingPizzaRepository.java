@@ -5,6 +5,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;
 
-public interface ConnectionFromPizzaRepository extends JpaRepository<ConnectionFromPizza, Long> {
-
+public interface ToppingPizzaRepository extends JpaRepository<ToppingPizza, Long> {
+    List<ToppingPizza> findAllByPizza(Pizza pizza);
 }

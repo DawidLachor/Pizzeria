@@ -8,5 +8,8 @@ insert into pizza(name, description, standard, cake_id, size_id) values ('Pyszna
                                                                         ('Kwestia Smaku', 'Ciasto na pizzę jest bardzo proste do przygotowania i składa się z ' ||
                                                                                           'mąki, wody, drożdży, cukru, soli oraz oliwy. '
                                                                                           , true, 1, 2);
-insert into connection_from_pizza(dual, pizza_id, topping_id) values (true, 1, 1), (true, 1, 3), (true, 1, 4), (true, 2, 1), (true, 2, 2), (true, 2, 3);
+insert into topping_pizza(dual, pizza_id, topping_id) values (true, 1, 1), (true, 1, 3), (true, 1, 4), (true, 2, 1), (true, 2, 2), (true, 2, 3);
 insert into pizza_sauce(pizza_id, sauce_id) values (1, 3), (2, 1), (2, 2);
+insert into orders (date, price)
+values (CURRENT_DATE, 25), ('2013-06-05 00:00:00.0', 50);
+insert into pizza_order(order_id, pizza_id) values (1, 1), (1, 2), (2, 2);
