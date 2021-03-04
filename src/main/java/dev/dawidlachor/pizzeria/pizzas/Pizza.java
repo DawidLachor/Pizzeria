@@ -1,4 +1,4 @@
-package dev.dawidlachor.pizzeria.Pizzas;
+package dev.dawidlachor.pizzeria.pizzas;
 
 import dev.dawidlachor.pizzeria.cakes.Cake;
 import dev.dawidlachor.pizzeria.orders.Orders;

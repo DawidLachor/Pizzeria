@@ -1,6 +1,6 @@
 package dev.dawidlachor.pizzeria.cakes;
 
-import dev.dawidlachor.pizzeria.Pizzas.Pizza;
+import dev.dawidlachor.pizzeria.pizzas.Pizza;
 
 import javax.persistence.*;
 import java.math.BigDecimal;

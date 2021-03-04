@@ -1,6 +1,6 @@
 package dev.dawidlachor.pizzeria.orders;
 
-import dev.dawidlachor.pizzeria.Pizzas.Pizza;
+import dev.dawidlachor.pizzeria.pizzas.Pizza;
 import dev.dawidlachor.pizzeria.customers.Customer;
 import dev.dawidlachor.pizzeria.employers.Waiter;
 

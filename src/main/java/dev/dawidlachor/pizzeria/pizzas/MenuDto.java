@@ -1,8 +1,4 @@
-package dev.dawidlachor.pizzeria.Pizzas;
-
-import dev.dawidlachor.pizzeria.cakes.Cake;
-import dev.dawidlachor.pizzeria.sauce.Sauce;
-import dev.dawidlachor.pizzeria.toppings.Topping;
+package dev.dawidlachor.pizzeria.pizzas;
 
 import java.util.List;
 

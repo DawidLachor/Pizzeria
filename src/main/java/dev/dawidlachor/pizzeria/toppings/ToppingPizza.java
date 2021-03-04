@@ -1,9 +1,8 @@
 package dev.dawidlachor.pizzeria.toppings;
 
-import dev.dawidlachor.pizzeria.Pizzas.Pizza;
+import dev.dawidlachor.pizzeria.pizzas.Pizza;
 
 import javax.persistence.*;
-import java.util.List;
 
 @Entity
 public class ToppingPizza {

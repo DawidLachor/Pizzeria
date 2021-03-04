@@ -1,4 +1,4 @@
-package dev.dawidlachor.pizzeria.Pizzas;
+package dev.dawidlachor.pizzeria.pizzas;
 
 import dev.dawidlachor.pizzeria.sauce.Sauce;
 import dev.dawidlachor.pizzeria.sauce.SauceRepository;

@@ -1,6 +1,6 @@
 package dev.dawidlachor.pizzeria.orders;
 
-import dev.dawidlachor.pizzeria.Pizzas.PizzaDto;
+import dev.dawidlachor.pizzeria.pizzas.PizzaDto;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;

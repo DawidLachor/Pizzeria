@@ -1,4 +1,4 @@
-package dev.dawidlachor.pizzeria.Pizzas;
+package dev.dawidlachor.pizzeria.pizzas;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;

@@ -1,9 +1,8 @@
 package dev.dawidlachor.pizzeria.orders;
 
-import dev.dawidlachor.pizzeria.Pizzas.MappingPizza;
-import dev.dawidlachor.pizzeria.Pizzas.Pizza;
-import dev.dawidlachor.pizzeria.Pizzas.PizzaDto;
-import dev.dawidlachor.pizzeria.Pizzas.PizzaRepository;
+import dev.dawidlachor.pizzeria.pizzas.MappingPizza;
+import dev.dawidlachor.pizzeria.pizzas.PizzaDto;
+import dev.dawidlachor.pizzeria.pizzas.PizzaRepository;
 import org.springframework.stereotype.Service;
 
 import java.math.BigDecimal;

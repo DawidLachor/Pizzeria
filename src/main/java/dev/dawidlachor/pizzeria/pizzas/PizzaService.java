@@ -1,4 +1,4 @@
-package dev.dawidlachor.pizzeria.Pizzas;
+package dev.dawidlachor.pizzeria.pizzas;
 
 import org.springframework.stereotype.Service;
 
